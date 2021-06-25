@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="19.331" height="22.553" viewBox="0 0 19.331 22.553">
+    <defs>
+        <style>
+            .cls-1{fill:#718594}
+        </style>
+    </defs>
+    <g id="그룹_113" data-name="그룹 113" transform="translate(-1038 -434)">
+        <path id="Icon_awesome-pen" d="M4.961 1.592l2.186 2.187L2.4 8.526l-1.949.215A.41.41 0 0 1 0 8.287l.217-1.95 4.744-4.745zM8.5 1.267L7.471.241a.82.82 0 0 0-1.16 0l-.964.966 2.186 2.186.967-.966a.82.82 0 0 0 0-1.16z" class="cls-1" data-name="Icon awesome-pen" transform="translate(1042.708 437.735)"/>
+        <g id="그룹_112" data-name="그룹 112" transform="translate(1038 434)">
+            <path id="패스_191" d="M33.415 21H16.232a1.074 1.074 0 0 0-1.074 1.074v20.4a1.074 1.074 0 0 0 1.074 1.074h17.183a1.074 1.074 0 0 0 1.074-1.074v-20.4A1.074 1.074 0 0 0 33.415 21zm-.537 20.942H16.769V22.611h16.109z" class="cls-1" data-name="패스 191" transform="translate(-15.158 -21)"/>
+            <rect id="사각형_55" width="9.78" height="1.746" class="cls-1" data-name="사각형 55" rx=".873" transform="translate(4.89 14.169)"/>
+            <rect id="사각형_56" width="9.78" height="1.746" class="cls-1" data-name="사각형 56" rx=".873" transform="translate(4.89 16.964)"/>
+        </g>
+    </g>
+</svg>

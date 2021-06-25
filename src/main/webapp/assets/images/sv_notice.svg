@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="17.648" height="19.608" viewBox="0 0 17.648 19.608">
+    <defs>
+        <style>
+            .cls-1{fill:#adb9de}
+        </style>
+    </defs>
+    <g id="그룹_105" data-name="그룹 105" transform="translate(-1229.317 -98.875)">
+        <path id="빼기_10" d="M-2081.313-4112.392h-13.726a1.963 1.963 0 0 1-1.961-1.961l.01-13.726a1.954 1.954 0 0 1 .568-1.385 1.933 1.933 0 0 1 1.383-.577h.98V-4132h1.961v1.96h7.844v-1.96h1.961v1.96h.981a1.963 1.963 0 0 1 1.961 1.961v13.726a1.963 1.963 0 0 1-1.961 1.961zm-13.726-12.746v10.785h13.726v-10.785z" class="cls-1" data-name="빼기 10" transform="translate(3326.317 4230.875)"/>
+        <g id="그룹_104" data-name="그룹 104" transform="translate(1233.238 108.038)">
+            <path id="교차_5" d="M-2085.5-4104.169v-1.96h9.8v1.96z" class="cls-1" data-name="교차 5" transform="translate(2085.5 4106.13)"/>
+            <path id="교차_6" d="M-2085.5-4104.169v-1.96h7.077v1.96z" class="cls-1" data-name="교차 6" transform="translate(2085.5 4110.222)"/>
+        </g>
+    </g>
+</svg>

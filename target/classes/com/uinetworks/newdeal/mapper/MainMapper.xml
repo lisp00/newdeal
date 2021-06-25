@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uinetworks.newdeal.mapper.MainMapper">
+    <select id="selectGrid" resultType="com.uinetworks.newdeal.domain.GridVO">
+        SELECT *
+        FROM TB_GRID;
+    </select>
+
+    <select id="selectPlan" resultType="com.uinetworks.newdeal.domain.PlanVO">
+        select *
+        from "plan"
+        where plan_num=1
+    </select>
+
+    <select id="selectStGrid" resultType="com.uinetworks.newdeal.domain.StGridVO">
+        SELECT *
+        FROM "ST_GRID"
+    </select>
+
+    <select id="daysCount" resultType="java.lang.Integer">
+        select count(*)
+        from "calendar"
+        where 1=1
+            and num_week not in (1, 7)
+            and holiday not in (1)
+            and sol_dash_date between #{from} and #{to}
+    </select>
+
+    <select id="allGridCount" resultType="java.lang.Integer">
+        select count(*)
+        from "tb_grid"
+    </select>
+
+    <select id="editGridCount" resultType="java.lang.Integer">
+        select count(*)
+        from "tb_grid"
+        where u_de is not null
+    </select>
+
+    <select id="workGridCount" resultType="java.lang.Integer">
+        select count(*)
+        from "tb_grid"
+        where init_grd_tp = '1'
+    </select>
+
+    <select id="inspectionBGridCount" resultType="java.lang.Integer">
+        select count(*)
+        from "tb_grid"
+        where insp_nd is not null
+    </select>
+
+    <select id="inspectionTGridCount" resultType="java.lang.Integer">
+        select count(*)
+        from "tb_grid"
+        where insp_nd = true
+    </select>
+
+    <select id="inspectionFGridCount" resultType="java.lang.Integer">
+        select count(*)
+        from "tb_grid"
+        where insp_nd = false
+    </select>
+</mapper>
