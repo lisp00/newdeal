@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uinetworks.newdeal.mapper.CountMapper">
+    <select id="totalCnt" resultType="int">
+        SELECT COUNT(*)
+        FROM "tb_grid"
+    </select>
+
+    <select id="validCnt" resultType="int">
+        SELECT COUNT(*)
+        FROM "tb_grid"
+        WHERE INIT_GRD_TP = true;
+    </select>
+
+    <select id="lvCnt" resultType="int">
+        SELECT COUNT(*)
+        FROM "tb_grid"
+        WHERE 1=1
+            AND INIT_GRD_TP = true
+        <choose>
+            <when test="lv == 1">
+                AND lv1_de is not null
+                AND work_level = #{lv}
+            </when>
+            <when test="lv == 2">
+                AND lv2_de is not null
+                AND work_level = #{lv}
+            </when>
+            <when test="lv == 3">
+                AND lv3_de is not null
+                AND work_level = #{lv}
+            </when>
+            <when test="lv == 4">
+                AND lv4_de is not null
+                AND work_level = #{lv}
+            </when>
+        </choose>
+    </select>
+
+    <select id="inspCnt" resultType="int">
+        SELECT COUNT(*)
+        FROM "tb_grid"
+        WHERE 1=1
+        AND INIT_GRD_TP = true
+        <choose>
+            <when test="insp == 1">
+                AND insp1_de is not null
+            </when>
+            <when test="insp == 2">
+                AND insp2_de is not null
+            </when>
+        </choose>
+    </select>
+
+    <select id="inspTotalCnt" resultType="int">
+        SELECT COUNT(*)
+        FROM "tb_grid"
+        WHERE 1=1
+        AND INIT_GRD_TP = true
+        <choose>
+            <when test="inspTotal == 1">
+                AND insp1_nd is not null
+            </when>
+            <when test="inspTotal == 2">
+                AND insp2_nd is not null
+            </when>
+        </choose>
+    </select>
+
+    <select id="vrfCnt" resultType="int">
+        SELECT COUNT(*)
+        FROM "tb_grid"
+        WHERE 1=1
+        AND INIT_GRD_TP = true
+        <choose>
+            <when test="vrf == 1">
+                AND verify1_de is not null
+            </when>
+            <when test="vrf == 2">
+                AND verify2_de is not null
+            </when>
+        </choose>
+    </select>
+</mapper>

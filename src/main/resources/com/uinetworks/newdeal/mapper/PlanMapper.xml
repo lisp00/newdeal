@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.uinetworks.newdeal.mapper.PlanMapper">
+    <select id="selectPlan" resultType="com.uinetworks.newdeal.domain.PlanVO">
+        select *
+        from "plan"
+        where plan_num=1
+    </select>
+
+    <select id="daysCount" resultType="java.lang.Integer">
+        select count(*)
+        from "calendar"
+        where 1=1
+            and num_week not in (1, 7)
+            and holiday not in (1)
+            and sol_dash_date between #{from} and #{to}
+    </select>
+</mapper>

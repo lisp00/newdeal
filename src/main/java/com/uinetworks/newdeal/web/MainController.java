@@ -17,11 +17,9 @@ public class MainController {
 
     @GetMapping("/")
     public String main(Model model) {
-        PlanVO plan = mainService.planInfo();
         log.info("in controller");
-        model.addAttribute("editPlan", mainService.getEditPlan(plan));
-        model.addAttribute("inspectionPlan", mainService.getInspectionPlan(plan));
-        model.addAttribute("gridCount", mainService.getGridInfo());
+        model.addAttribute("plan", mainService.getPlan());
+        model.addAttribute("count", mainService.getCount());
         return "main/index";
     }
 }

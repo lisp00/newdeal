@@ -27,13 +27,13 @@
     <section class="content">
 
         <div class="row">
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <dl class="dsconts h320">
                     <dt>
                         <article class="jfbet">
                             <h3>
                                 <span class="hormark"></span>
-                                <span class="htitle">작업 일정 완료 예정(영업일 기준)</span>
+                                <span class="htitle">작업 일정(영업일 기준)</span>
                             </h3>
                         </article>
                     </dt>
@@ -43,19 +43,9 @@
                                 <div class="another_status m-r-40">
                                     <div class="ano_line" >
                                         <p class="left">
-                                            <span>편집 일정 : ${editPlan.beginDay} ~ ${editPlan.dDay} - ${editPlan.dDayCount}일</span>
+                                            <span>편집 일정 : ${plan.editFrom} ~ ${plan.editTo}(${plan.editPlan}일)</span>
                                             <br/>
-                                            <span>실사 일정 : ${inspectionPlan.dDay} - ${inspectionPlan.dDayCount}일</span>
-                                            <br/>
-                                            <span>유효 그리드 현황 : ${gridCount.workGridCount} / ${gridCount.allGridCount} (${gridCount.allGridP}%)</span>
-                                            <br/>
-                                            <span>유효 그리드 작업 현황</span>
-                                            <br/>
-                                            <span>실사 예정 그리드 현황</span>
-                                            <br/>
-                                            <span>링크/노드 입력 현황</span>
-                                            <br/>
-                                            <span>신규 추가 링크 / 노드 입력 현황</span>
+                                            <span>실사 일정 : ${plan.inspectionFrom} ~ ${plan.inspectionTo}(${plan.inspectionPlan}일)</span>
                                         </p>
                                     </div><!--ano_line-->
                                 </div><!--another_status-->
@@ -64,34 +54,38 @@
                     </dd>
                 </dl><!-- dsconts -->
             </div><!-- col-lg-4 -->
-            <div class="col-lg-4">
+            <div class="col-lg-6">
                 <dl class="dsconts h320">
                     <dt>
                         <article class="jfbet">
                             <h3>
                                 <span class="hormark"></span>
-                                <span class="htitle">목적별</span>
+                                <span class="htitle">데이터 편집 단계</span>
                             </h3>
-                            <div class="betw_right">
-                                <button type="button" id="serviceDailyButton" class="btn btn-yg1">일간</button>
-                                <button type="button" id="serviceMonthlyButton" class="btn btn-wh1 m-l-5">월간</button>
-                            </div>
                         </article>
                     </dt>
                     <dd>
-                        <!-- 일간 -->
-                        <div class="big_respon1" id="serviceDaily">
-                            <article class="big_status flx_jfcent flx_aicent no_flwrap m-t-30">
-                                <div class="img_chart w-35 p-r-15 m-b-5" id="serviceDayChart">불러오는중</div>
-                                <div class="another_status purpose_status" id="serviceDayLegend">불러오는중</div>
-                            </article><!--big_status-->
-                        </div>
-                        <!-- 월간 -->
-                        <div class="big_respon1" id="serviceMonthly">
-                            <article class="big_status flx_jfcent flx_aicent no_flwrap m-t-30">
-                                <div class="img_chart w-35 p-r-15 m-b-5" id="serviceMonthChart">불러오는중</div>
-                                <div class="another_status purpose_status" id="serviceMonthLegend">불러오는중</div>
-                            </article><!--big_status-->
+                        <div class="big_respon1">
+                            <article class="big_status flx_jfcent m-t-30">
+                                <div class="another_status m-r-40">
+                                    <div class="ano_line" >
+                                        <p class="left">
+                                            <span>유효 그리드 현황 : ${count.validCnt} / ${count.totalCnt} (${count.validCntP}%)</span>
+                                            <br/>
+                                            <span>미작업 그리드 현황 : ${count.lv0Cnt} / ${count.validCnt} (${count.lv0P}%)</span>
+                                            <br/>
+                                            <br/>
+                                            <span>1단계 그리드 현황 :  ${count.lv1Cnt} / ${count.validCnt} (${count.lv1P}%)</span>
+                                            <br/>
+                                            <span>2단계 그리드 현황 :  ${count.lv2Cnt} / ${count.validCnt} (${count.lv2P}%)</span>
+                                            <br/>
+                                            <span>3단계 그리드 현황 :  ${count.lv3Cnt} / ${count.validCnt} (${count.lv3P}%)</span>
+                                            <br/>
+                                            <span>4단계 그리드 현황 :  ${count.lv4Cnt} / ${count.validCnt} (${count.lv4P}%)</span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
                     </dd>
                 </dl><!-- dsconts -->
@@ -105,24 +99,24 @@
                         <article class="jfbet">
                             <h3>
                                 <span class="hormark"></span>
-                                <span class="htitle">최근 이용내역</span>
+                                <span class="htitle">현장 실사 단계</span>
                             </h3>
                         </article>
                     </dt>
                     <dd>
                         <div class="big_respon1">
-                            <div class="table_box">
-                                <table class="gray_table bigger_table grtable1" id="recentUsingTable">
-                                    <thead>
-                                    <tr>
-                                        <th>번호</th>
-                                        <th>종료시간</th>
-                                        <th>성명</th>
-                                        <th>소속기관명</th>
-                                    </tr>
-                                    </thead>
-                                </table>
-                            </div><!--table_box-->
+                            <article class="big_status flx_jfcent m-t-30">
+                                <div class="another_status m-r-40">
+                                    <div class="ano_line" >
+                                        <p class="left">
+                                            <span>1차 실사 그리드 현황 : ${count.insp1Cnt} / ${count.insp1TotalCnt} (${count.insp1P}%)</span>
+                                            <br/>
+                                            <span>2차 실사 그리드 현황 : ${count.insp2Cnt} / ${count.insp2TotalCnt} (${count.insp2P}%)</span>
+                                            <br/>
+                                        </p>
+                                    </div><!--ano_line-->
+                                </div><!--another_status-->
+                            </article><!--big_status-->
                         </div>
                     </dd>
                 </dl><!-- dsconts -->
@@ -133,33 +127,23 @@
                         <article class="jfbet">
                             <h3>
                                 <span class="hormark"></span>
-                                <span class="htitle">설문조사 현황</span>
+                                <span class="htitle">데이터 검증 단계</span>
                             </h3>
-                            <div class="betw_right">
-                                <select class="form-control selbox slmr1 w150">
-                                    <c:forEach var="surveyCombo" items="${surveyCombo}" varStatus="status">
-                                        <option value="${surveyCombo.surveyId}">${surveyCombo.title}</option>
-                                    </c:forEach>
-                                </select>
-                            </div>
                         </article>
                     </dt>
                     <dd>
                         <div class="big_respon1">
-                            <article class="big_status flx_jfcent flx_aicent">
-                                <div class="question table_box">
-                                    <table class="question_table gray_table">
-                                        <thead>
-                                        <tr>
-                                            <th>번호</th>
-                                            <th>문항</th>
-                                            <th>점수</th>
-                                        </tr>
-                                        </thead>
-                                        <tbody>
-                                        </tbody>
-                                    </table>
-                                </div>
+                            <article class="big_status flx_jfcent m-t-30">
+                                <div class="another_status m-r-40">
+                                    <div class="ano_line" >
+                                        <p class="left">
+                                            <span>1차 검증 그리드 현황 : ${count.vrf1Cnt} / ${count.validCnt} (${count.vrf1P}%)</span>
+                                            <br/>
+                                            <span>2차 검증 그리드 현황 : ${count.vrf2Cnt} / ${count.validCnt} (${count.vrf2P}%)</span>
+                                            <br/>
+                                        </p>
+                                    </div><!--ano_line-->
+                                </div><!--another_status-->
                             </article><!--big_status-->
                         </div>
                     </dd>
